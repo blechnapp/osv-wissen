@@ -21,6 +21,7 @@ class KurzhilfeWidget extends BaseWidget
             ->withPreviewImageUrl('/images/widgets/text.svg')
             ->withType(WidgetTypes::STATIC)
             ->withCategory(WidgetCategories::TEXT)
+            ->withSearchKeyWords(["osv", "kurzhilfe", "hilfe", "kontakt", "wissen"])
             ->withPosition(100)
             ->toArray();
     }

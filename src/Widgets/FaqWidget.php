@@ -21,6 +21,7 @@ class FaqWidget extends BaseWidget
             ->withPreviewImageUrl('/images/widgets/text.svg')
             ->withType(WidgetTypes::STATIC)
             ->withCategory(WidgetCategories::TEXT)
+            ->withSearchKeyWords(["osv", "faq", "fragen", "hilfe", "wissen"])
             ->withPosition(100)
             ->toArray();
     }
