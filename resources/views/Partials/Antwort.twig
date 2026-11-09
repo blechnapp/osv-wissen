@@ -1,0 +1,6 @@
+{% macro antwort(b) %}
+<div class="osvw-a">
+{% for x in b.bloecke %}{% if x.typ == 'ul' %}<ul>{% for punkt in x.punkte %}<li>{{ punkt }}</li>{% endfor %}</ul>{% elseif x.typ == 'link' %}<p><a href="{{ x.url }}">{{ x.text }}</a></p>{% else %}<p>{{ x.text }}</p>{% endif %}{% endfor %}
+{% if b.video %}<a class="osvw-video" href="https://www.youtube.com/watch?v={{ b.video.youtube }}" target="_blank" rel="noopener"><span class="osvw-play"></span>Video: {{ b.video.titel }}</a>{% endif %}
+</div>
+{% endmacro %}

@@ -1,0 +1,566 @@
+{
+ "stand": "2026-11-09",
+ "themen": [
+  {
+   "id": "zahlung",
+   "titel": "Zahlung und Erstattung"
+  },
+  {
+   "id": "beschaedigt",
+   "titel": "Beschädigt, unvollständig oder falsch geliefert"
+  },
+  {
+   "id": "widerruf",
+   "titel": "Widerruf und Rücksendung"
+  },
+  {
+   "id": "aendern",
+   "titel": "Bestellung ändern oder stornieren"
+  },
+  {
+   "id": "ersatzteile",
+   "titel": "Ersatzteile und Reparaturen"
+  },
+  {
+   "id": "benutzung",
+   "titel": "Pyramide, Räuchermännchen, Lichterbogen"
+  },
+  {
+   "id": "erbstueck",
+   "titel": "Altes Stück geerbt"
+  },
+  {
+   "id": "lieferung",
+   "titel": "Bestellung und Lieferung"
+  },
+  {
+   "id": "konto",
+   "titel": "Kundenkonto"
+  },
+  {
+   "id": "schauwerkstatt",
+   "titel": "Schauwerkstatt und Laden"
+  },
+  {
+   "id": "sonder",
+   "titel": "Sonderanfertigungen"
+  },
+  {
+   "id": "herstellung",
+   "titel": "Herstellung"
+  },
+  {
+   "id": "gewinnspiel",
+   "titel": "Weihnachtsgewinnspiel"
+  }
+ ],
+ "bausteine": [
+  {
+   "id": "zahlung-01",
+   "thema": "zahlung",
+   "frage": "Welche Zahlungsarten bieten Sie an?",
+   "absaetze": [
+    "Sie können bei uns so bezahlen:",
+    "- PayPal",
+    "- Kreditkarte (über PayPal)",
+    "- Apple Pay und Google Pay (über PayPal)",
+    "- Klarna: Rechnung, Sofort bezahlen und Ratenkauf",
+    "- Vorkasse per Überweisung",
+    "Alle Zahlungsdaten werden verschlüsselt übertragen."
+   ],
+   "orte": [
+    "faq",
+    "kontakt"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "zahlung-02",
+   "thema": "zahlung",
+   "frage": "Ich habe Vorkasse gewählt. Wohin überweise ich?",
+   "absaetze": [
+    "Unsere Bankverbindung steht in Ihrer Bestellbestätigung. Bitte geben Sie als Verwendungszweck Ihre Auftragsnummer an. Sobald Ihre Zahlung bei uns eingegangen ist, versenden wir Ihre Bestellung."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "zahlung-03",
+   "thema": "zahlung",
+   "frage": "Wann bekomme ich mein Geld zurück?",
+   "absaetze": [
+    "Nach einem Widerruf erstatten wir den Betrag, sobald die Ware wieder bei uns ist oder Sie uns die Rücksendung nachweisen. Bei einer Stornierung erstatten wir sofort. Das Geld geht immer auf dem Weg zurück, auf dem Sie bezahlt haben, also zum Beispiel an Ihr PayPal- oder Klarna-Konto."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "zahlung-04",
+   "thema": "zahlung",
+   "frage": "Wann bekomme ich meine Rechnung?",
+   "absaetze": [
+    "Ihre Rechnung erhalten Sie per E-Mail, sobald Ihre Bestellung versendet ist."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "beschaedigt-05",
+   "thema": "beschaedigt",
+   "frage": "Meine Bestellung ist defekt angekommen und ich möchte sie zurücksenden. Was kann ich tun?",
+   "absaetze": [
+    "Bitte reklamieren Sie eine defekte Lieferung umgehend per E-Mail an uns, unter Angabe der Auftragsnummer und mit Fotos des Defektes. Bitte informieren Sie uns, ob Sie einen Umtausch, eine Reparatur oder eine Erstattung des Kaufbetrages wünschen. Anschließend stellen wir Ihnen ein DHL Retourenlabel für die kostenfreie Rücksendung zur Verfügung. Nach Eingang der Ware in unserem Lager erfolgt der Umtausch, die Reparatur oder die Gutschrift."
+   ],
+   "orte": [
+    "faq",
+    "kontakt"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "beschaedigt-06",
+   "thema": "beschaedigt",
+   "frage": "Meine Bestellung ist defekt angekommen und ich möchte sie selbst reparieren. Was kann ich tun?",
+   "absaetze": [
+    "Kleine Defekte lassen sich oft mit etwas Holzleim beheben. Wenn Sie Ihre defekte Lieferung behalten möchten, bieten wir Ihnen gern einen Preisnachlass oder eine kleine Tube Holzleim für die Reparatur an. Bitte senden Sie uns dazu eine E-Mail mit Ihrer Auftragsnummer und einem Foto des Defektes."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "beschaedigt-07",
+   "thema": "beschaedigt",
+   "frage": "Meine Bestellung ist unvollständig angekommen. Was kann ich tun?",
+   "absaetze": [
+    "Wir bitten Sie, Ihre gelieferten Artikel umgehend nach Erhalt auf Vollständigkeit zu prüfen. Ist Ihre Lieferung dennoch unvollständig, nehmen Sie bitte per E-Mail mit uns Kontakt auf und teilen Sie uns Ihre Auftragsnummer mit. Nach interner Prüfung senden wir Ihnen umgehend die fehlenden Artikel nach."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "widerruf-08",
+   "thema": "widerruf",
+   "frage": "Wie kann ich ein Produkt zurückgeben, wenn es mir nicht gefällt oder wenn es das falsche Geschenk war?",
+   "absaetze": [
+    "Um Ihre Bestellung zu widerrufen, senden Sie uns bitte innerhalb von 14 Tagen nach Lieferung das ausgefüllte Widerrufsformular per E-Mail zu. Dieses finden Sie hier:",
+    "https://www.original-seiffener-volkskunst.de/cancellation-form/",
+    "Bitte senden Sie die Ware umgehend nach Ihrem Widerruf sicher verpackt und unbenutzt an uns zurück. Wir bitten um Ihr Verständnis, dass die Rücksendekosten im Falle eines Widerrufes vom Käufer zu tragen sind."
+   ],
+   "orte": [
+    "faq",
+    "kontakt"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "aendern-09",
+   "thema": "aendern",
+   "frage": "Kann ich meine Bestellung noch ändern oder stornieren?",
+   "absaetze": [
+    "Schreiben Sie uns bitte so schnell wie möglich mit Ihrer Auftragsnummer. Solange Ihre Bestellung noch nicht verpackt ist, ändern oder stornieren wir sie gern. Ist sie schon unterwegs, können Sie die Ware nach Erhalt im Rahmen Ihres Widerrufsrechts zurückschicken."
+   ],
+   "orte": [
+    "faq",
+    "kontakt"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "aendern-10",
+   "thema": "aendern",
+   "frage": "Ich habe versehentlich doppelt bestellt. Was nun?",
+   "absaetze": [
+    "Schreiben Sie uns kurz, welche Auftragsnummer wir stornieren sollen. Den Betrag erstatten wir Ihnen auf dem Weg, auf dem Sie bezahlt haben."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "ersatzteile-11",
+   "thema": "ersatzteile",
+   "frage": "Bieten Sie Ersatzteile und Reparaturen an?",
+   "absaetze": [
+    "Die Seiffener Volkskunst eG ist nur einer von vielen Herstellern in Seiffen. Wir bitten um Ihr Verständnis, dass wir Reparaturen und Ersatzteile ausschließlich für Artikel aus unserer laufenden Produktion anbieten. Eine Auswahl unserer Ersatzteile finden Sie hier:",
+    "https://www.original-seiffener-volkskunst.de/weihnachten/ersatzteile/",
+    "Für weitere Ersatzteile aus unserem Haus kontaktieren Sie uns bitte per E-Mail mit einem Foto und den Maßen des Artikels sowie Ihren Kontaktdaten. Wir erstellen Ihnen gern nach Möglichkeit ein Angebot. Die Zahlung erfolgt per Vorkasse-Überweisung. Wir bitten um Verständnis, dass wir im Dezember keine individuellen Ersatzteilanfragen und Reparaturen bearbeiten. Ab Januar stehen wir Ihnen dafür gern wieder zur Verfügung.",
+    "Besitzen Sie ein Produkt eines anderen Herstellers, kontaktieren Sie ihn bitte direkt. Ist der Hersteller unbekannt oder nicht mehr tätig, nutzen Sie bitte die folgenden Kontaktdaten:",
+    "Reparatur oder Restauration:",
+    "Holzkunst Weißflog",
+    "Frau Marlen Weißflog",
+    "Im Gewerbegebiet 3",
+    "08315 Lauter-Bernsbach",
+    "Mail: HK-Weissflog@gmx.de",
+    "Zuordnung historische Produkte:",
+    "Spielzeugmuseum Seiffen, Hauptstraße 73, 09548 Kurort Seiffen, Telefon 037362 17019, info@spielzeugmuseum-seiffen.de"
+   ],
+   "orte": [
+    "faq",
+    "kontakt"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "benutzung-12",
+   "thema": "benutzung",
+   "frage": "Wie funktioniert ein Räuchermännchen?",
+   "absaetze": [
+    "Ein Räuchermännchen besteht aus einem Sockel und einem hohlen abnehmbaren Körper. Eine Räucherkerze wird angezündet, so dass sie glimmt, und ca. 30 Sekunden offen glimmen gelassen. Anschließend wird die Räucherkerze auf den Sockel in einen Metallhalter gestellt und der Körper vorsichtig darauf gesetzt. Der Rauch steigt durch den hohlen Körper nach oben und tritt durch den geöffneten Mund des Männchens aus."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": "",
+   "video": {
+    "youtube": "0UwywKvydOQ",
+    "titel": "Die Funktion eines Räuchermännchens"
+   }
+  },
+  {
+   "id": "benutzung-13",
+   "thema": "benutzung",
+   "frage": "Mein Räuchermännchen raucht nicht richtig. Was kann ich tun?",
+   "absaetze": [
+    "Überprüfen Sie zunächst, ob Luft zum Mundloch gelangt, indem Sie das Oberteil des Räuchermännchens leicht anheben und hineinpusten. Stellen Sie sicher, dass alle Öffnungen des Räuchermännchens frei von Verunreinigungen oder Rückständen sind. Nehmen Sie die Pfeife aus dem Mund heraus, setzen Sie diese korrekt ein und beachten Sie, dass das hintere Loch nicht durch die Klammer des Sockels blockiert wird.",
+    "Verwenden Sie trockene Räucherkerzen, da feuchte Kerzen möglicherweise nicht richtig brennen und keinen Rauch erzeugen. Lassen Sie die Räucherkerzen nach dem Anzünden etwa 30 Sekunden lang offen glimmen, bevor Sie das Oberteil des Räuchermännchens darauf setzen."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "benutzung-14",
+   "thema": "benutzung",
+   "frage": "Meine Pyramide dreht sich nicht richtig. Was kann ich tun?",
+   "absaetze": [
+    "Verwenden Sie ausschließlich hochwertige Pyramidenteelichte für Ihre Teelichtpyramide.",
+    "Stellen Sie sicher, dass das Lager Ihrer Pyramide sauber ist.",
+    "Geben Sie einen Tropfen Speiseöl ins Lager.",
+    "Überprüfen Sie das Gestell der Pyramide, schieben Sie den Stab hoch und reinigen Sie ihn gründlich.",
+    "Testen Sie verschiedene Flügelpositionen Ihrer Pyramide.",
+    "Vermeiden Sie die Aufstellung der Pyramide in der Nähe von Wärmequellen wie Heizungen.",
+    "Achten Sie darauf, dass keine offenen Fenster oder Türen in direkter Nähe zur Pyramide sind.",
+    "Stellen Sie sicher, dass die Pyramide auf einer stabilen, waagerechten Fläche steht.",
+    "Sollten Schleifgeräusche auftreten, suchen Sie die Ursache und beheben Sie sie, um Schäden zu vermeiden."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": "",
+   "video": {
+    "youtube": "Kw1tM3QJ6i8",
+    "titel": "Pyramide dreht nicht? Tipps aus der Werkstatt"
+   }
+  },
+  {
+   "id": "benutzung-15",
+   "thema": "benutzung",
+   "frage": "Mein Lichterbogen leuchtet nicht. Was kann ich tun?",
+   "absaetze": [
+    "Wenn Ihr Lichterbogen nicht leuchtet, liegt dies meistens am verwendeten Netzteil. Bitte testen Sie daher verschiedene Netzteile. Unser Netzteil mit Adapter von USB A auf C können Sie direkt hier bestellen:",
+    "https://www.original-seiffener-volkskunst.de/weihnachtsbeleuchtung/schwibbogen/steckernetzteil-220v-5v-fuer-led-bogen_726_3561/",
+    "Sollte der Bogen dennoch nicht leuchten, reklamieren Sie den Bogen bitte per E-Mail unter Angabe Ihrer Auftragsnummer. Nach der Rücksendung wird der Bogen von unserer Werkstatt getestet und fachmännisch repariert, wenn ein Defekt vorliegt."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "benutzung-16",
+   "thema": "benutzung",
+   "frage": "Sind die Figuren auf den Lichterbögen und Pyramiden befestigt?",
+   "absaetze": [
+    "Auf unseren naturfarbenen Lichterbögen und Pyramiden sind die Figuren befestigt. Auf den farbigen Lichterbögen werden diese lose mitgeliefert."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "benutzung-17",
+   "thema": "benutzung",
+   "frage": "Wie pflege ich erzgebirgische Holzprodukte richtig?",
+   "absaetze": [
+    "Vermeiden Sie direkte Sonneneinstrahlung, extreme Temperaturen und hohe Luftfeuchtigkeit. Mit einem weichen, trockenen Tuch lassen sich Staub und leichte Verschmutzungen entfernen."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "benutzung-18",
+   "thema": "benutzung",
+   "frage": "Können die Seiffener Volkskunst Nussknacker Nüsse knacken?",
+   "absaetze": [
+    "Unsere hochwertigen, handgefertigten Nussknacker aus dem Erzgebirge sind Dekorationsartikel. Zum Nüsse knacken sind sie nicht geeignet. Unsere Nussknacker sollen viele Jahre gut erhalten bleiben. Es wäre sehr bedauerlich, wenn diese beim Nüsse knacken Gebrauchsspuren an Holz und Farbe bekommen. In diesem Fall gewähren wir keine Garantie. Erfreuen Sie sich gern an unseren wunderschönen Nussknackern, doch schonen Sie bitte ihre Zähne. Vielen Dank!"
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "erbstueck-19",
+   "thema": "erbstueck",
+   "frage": "Ich habe ein altes Stück geerbt. Ist es von Ihnen und was ist es wert?",
+   "absaetze": [
+    "Den Wert von Stücken schätzen wir nicht, und wir kaufen auch keine an. Bei der Zuordnung historischer Stücke hilft Ihnen das Spielzeugmuseum Seiffen:",
+    "Spielzeugmuseum Seiffen, Hauptstraße 73, 09548 Kurort Seiffen, Telefon 037362 17019, info@spielzeugmuseum-seiffen.de",
+    "Ersatzteile und Reparaturen bieten wir nur für Artikel aus unserer laufenden Produktion an."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "lieferung-20",
+   "thema": "lieferung",
+   "frage": "Wie lange dauert die Lieferung?",
+   "absaetze": [
+    "Wenn alle bestellten Artikel verfügbar sind, erfolgt der Versand innerhalb von 24-48 Stunden nach Zahlungseingang. Sie erhalten eine Versandbestätigung per E-Mail. Die Lieferzeiten von DHL betragen in Deutschland in der Regel 1 bis 2 Werktage. Internationale Sendungen benötigen länger."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "lieferung-21",
+   "thema": "lieferung",
+   "frage": "Wie kann ich meine Sendung verfolgen?",
+   "absaetze": [
+    "Sie können Ihre Sendung über den Link in Ihrer Versandbestätigung verfolgen, die Sie per E-Mail erhalten haben."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "lieferung-22",
+   "thema": "lieferung",
+   "frage": "Mein gewünschter Artikel ist nicht bestellbar. Was kann ich tun?",
+   "absaetze": [
+    "Rufen Sie das gewünschte Produkt auf und geben Sie Ihre E-Mail Adresse in das vorgesehene Feld ein. Sobald der Artikel bestellbar ist, werden wir Sie per E-Mail informieren."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": "",
+   "pruefen": "Die E-Mail-Benachrichtigung bei Verfügbarkeit ist auf 2027 vertagt. Bis dahin: „Schreiben Sie uns, wir geben Ihnen Bescheid, wenn der Artikel wieder da ist“ oder Frage weglassen."
+  },
+  {
+   "id": "lieferung-23",
+   "thema": "lieferung",
+   "frage": "Mit welchem Paketdienstleister versenden Sie?",
+   "absaetze": [
+    "Wir versenden ausschließlich mit DHL. Genauere Informationen finden Sie hier:",
+    "https://www.original-seiffener-volkskunst.de/versand/"
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "lieferung-24",
+   "thema": "lieferung",
+   "frage": "Was kostet der Versand?",
+   "absaetze": [
+    "Innerhalb Deutschlands liefern wir ab 69 € Bestellwert versandkostenfrei, darunter berechnen wir 6,90 €. Die Kosten für Lieferungen ins Ausland finden Sie hier:",
+    "https://www.original-seiffener-volkskunst.de/versand/"
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "lieferung-25",
+   "thema": "lieferung",
+   "frage": "Wie kann ich Produkte im Onlineshop der Seiffener Volkskunst eG kaufen?",
+   "absaetze": [
+    "Sie können Produkte ganz einfach online über unsere Website kaufen. Wählen Sie die gewünschten Artikel aus und fügen Sie sie Ihrem Warenkorb hinzu. Melden Sie sich in Ihrem Kundenkonto an oder bestellen Sie als Gast. Gehen Sie zur Kasse und wählen Sie eine Zahlungsart. Folgen Sie den Anweisungen zur Zahlung. Nach Bestellabschluss erhalten Sie eine Bestellbestätigung per E-Mail."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "lieferung-26",
+   "thema": "lieferung",
+   "frage": "Wie löse ich einen Gutschein ein?",
+   "absaetze": [
+    "An der Kasse wählen Sie unterhalb der Zahlungsarten „Ich habe einen Gutschein“ aus. Anschließend geben Sie ihren Gutschein-Code in das vorgesehene Feld ein und klicken anschließend auf „Einlösen“. Der Betrag wird automatisch abgezogen."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": "",
+   "pruefen": "Ablauf in der Kasse nachsehen (Feldname, Ort). Ergänzen: pro Bestellung ein Gutscheincode, Gutscheine nur online einlösbar."
+  },
+  {
+   "id": "lieferung-27",
+   "thema": "lieferung",
+   "frage": "Kann ich auch vor Ort einkaufen?",
+   "absaetze": [
+    "Ja, wir freuen uns auf Ihren Besuch in unserer Schauwerkstatt in Seiffen. Hier können Sie einkaufen, basteln und unseren Handwerkern über die Schulter schauen. Sie finden uns auf der Bahnhofstraße 12, 09548 Kurort Seiffen."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "konto-28",
+   "thema": "konto",
+   "frage": "Ich kann mich nicht anmelden oder mein Konto ist gesperrt. Was tun?",
+   "absaetze": [
+    "Klicken Sie bei der Anmeldung auf „Passwort vergessen?“ und geben Sie Ihre E-Mail-Adresse ein. Sie bekommen dann eine E-Mail mit einem Link, über den Sie ein neues Passwort festlegen. Die E-Mail landet manchmal im Spam-Ordner. Sie können übrigens auch jederzeit ohne Kundenkonto als Gast bestellen."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "konto-29",
+   "thema": "konto",
+   "frage": "Wie ändere ich meine E-Mail-Adresse?",
+   "absaetze": [
+    "Melden Sie sich an und öffnen Sie „Mein Konto“. Dort können Sie Ihre E-Mail-Adresse ändern."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": "",
+   "pruefen": "Im Shop nachsehen, ob und wo das in „Mein Konto“ geht, sonst Text ändern."
+  },
+  {
+   "id": "schauwerkstatt-30",
+   "thema": "schauwerkstatt",
+   "frage": "Kann ich bei Ihnen basteln oder eine Führung buchen?",
+   "absaetze": [
+    "Ja, in unserer Schauwerkstatt in Seiffen. Termine und Buchung finden Sie auf www.schauwerkstatt.de."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "sonder-31",
+   "thema": "sonder",
+   "frage": "Bieten Sie Einzelanfertigungen an?",
+   "absaetze": [
+    "Wir bitten um Ihr Verständnis, dass wir auf Grund unserer begrenzten Produktionskapazität und des enormen Aufwandes keine Einzelanfertigungen anbieten."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "sonder-32",
+   "thema": "sonder",
+   "frage": "Ab welcher Menge sind Sonderanfertigungen möglich?",
+   "absaetze": [
+    "Sonderanfertigungen sind ab einer Menge von 50 Stück möglich. Bei Interesse kontaktieren Sie uns gern per E-Mail."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "herstellung-33",
+   "thema": "herstellung",
+   "frage": "Sind die Produkte handgefertigt?",
+   "absaetze": [
+    "Unsere Produkte werden in Handarbeit in Deutschland hergestellt, um die traditionelle erzgebirgische Handwerkskunst zu bewahren."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": "",
+   "pruefen": "Nicht mit „handbemalt“ werben; „in Handarbeit“ nur, wenn für alle Stücke zutreffend."
+  },
+  {
+   "id": "herstellung-34",
+   "thema": "herstellung",
+   "frage": "Woher stammen die Materialien für Ihre Produkte?",
+   "absaetze": [
+    "Die Materialien für unsere Produkte stammen größtenteils aus der Region und werden sorgfältig ausgewählt, um die höchste Qualität zu gewährleisten. Die von uns hergestellten Produkte werden aus einheimischen Laubhölzern gefertigt. Wir legen Wert auf nachhaltige Beschaffung und umweltfreundliche Produktionsprozesse."
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": ""
+  },
+  {
+   "id": "gewinnspiel-35",
+   "thema": "gewinnspiel",
+   "frage": "Wie nehme ich am Gewinnspiel teil?",
+   "absaetze": [
+    "Jede Bestellung in unserem Onlineshop bis 22.12.2026 ist automatisch ein Los, Sie müssen nichts weiter tun. Alle Bedingungen finden Sie auf der Gewinnspielseite:",
+    "https://www.original-seiffener-volkskunst.de/gewinnspiel/"
+   ],
+   "orte": [
+    "faq"
+   ],
+   "kategorien": [],
+   "bis": "2026-12-22"
+  }
+ ]
+}

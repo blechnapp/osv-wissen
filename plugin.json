@@ -1,0 +1,17 @@
+{
+  "name": "OSVWissen",
+  "namespace": "OSVWissen",
+  "type": "general",
+  "version": "0.1.0",
+  "license": "proprietary",
+  "author": "OSV",
+  "shortDescription": "Hilfetexte aus einer Quelle: FAQ-Seite, Kurzhilfe auf der Kontaktseite, später Anleitung und Pflege auf der Artikelseite.",
+  "description": "Alle Hilfetexte liegen als Bausteine in einer Datei (Frage, Text, Video, Kategorien, Einsatzorte, gültig bis). Daraus entstehen die FAQ-Seite und die Kurzhilfe auf der Kontaktseite als ShopBuilder-Widgets. Andere Plugins lesen die Bausteine über den WissenService.",
+  "categories": ["3527"],
+  "require": {"IO": ">=5.0.0", "Ceres": ">=5.0.0"},
+  "serviceProvider": "OSVWissen\\Providers\\OSVWissenServiceProvider",
+  "dependencies": {},
+  "javaScriptFiles": [],
+  "runOnBuild": [],
+  "dataProviders": []
+}
