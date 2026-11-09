@@ -1,7 +1,6 @@
 {% import "OSVWissen::Partials.Antwort" as a %}
 {% set customClass = widget.settings.customClass.mobile %}
 {% if fragen | length > 0 %}
-{% include "OSVWissen::Partials.Stil" %}
 <div class="widget osvw osvw-kurz{% if customClass | length > 0 %} {{ customClass }}{% endif %}">
   <h2>Schnelle Hilfe</h2>
   <p>Die häufigsten Anliegen, sofort beantwortet. Passt nichts, schreiben Sie uns einfach unten.</p>

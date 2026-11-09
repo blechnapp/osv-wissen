@@ -4,8 +4,9 @@ Alle Hilfetexte des Shops aus **einer** Quelle. Kein Text steht doppelt.
 
 ## Einrichtung
 1. Plugin im Plugin-Set installieren und bereitstellen (erst Set 75, dann Set 72).
-2. ShopBuilder → neue Inhaltskategorie „Häufige Fragen“ mit der Adresse `/faq/`, Widget **OSV Häufige Fragen** hineinziehen, speichern.
-3. Kontaktseite: Widget **OSV Kurzhilfe** oberhalb des Formulars einfügen.
+2. Container-Verknüpfungen im Plugin-Set: „OSV Wissen Stil“ → Ceres::Template.Style, „OSV Wissen Suche“ → Ceres::Script.AfterScriptsLoaded. Ohne die beiden fehlen Gestaltung und Suche.
+3. ShopBuilder → neue Inhaltskategorie „Häufige Fragen“ mit der Adresse `/faq/`, Widget **OSV Häufige Fragen** hineinziehen, speichern.
+4. Kontaktseite: Widget **OSV Kurzhilfe** oberhalb des Formulars einfügen.
 
 ## Bausteine
 `daten/wissen.json`, je Baustein:

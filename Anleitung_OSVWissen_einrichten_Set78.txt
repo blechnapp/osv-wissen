@@ -8,7 +8,7 @@
 
 2. Im Set 78 das Plugin „OSVWissen“ installieren und aktiv setzen.
    Im Git-Reiter des Plugins auf Tag  v0.1.0  stellen.
-   Container-Verknüpfungen gibt es keine. Konfiguration: nichts ändern.
+   Container-Verknüpfungen ab 0.2.0: „OSV Wissen Stil“ → Ceres::Template.Style und „OSV Wissen Suche“ → Ceres::Script.AfterScriptsLoaded. Konfiguration: nichts ändern.
 
 3. Set 78 bereitstellen und abwarten, bis Plenty fertig meldet (kann über 10 Minuten dauern).
    Kommt ein Fehler beim Bereitstellen: Bild davon an mich, nichts weiter anfassen.

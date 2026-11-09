@@ -1,6 +1,5 @@
 {% import "OSVWissen::Partials.Antwort" as a %}
 {% set customClass = widget.settings.customClass.mobile %}
-{% include "OSVWissen::Partials.Stil" %}
 <div class="widget osvw{% if customClass | length > 0 %} {{ customClass }}{% endif %}" data-osvw-faq>
   <div class="osvw-hero">
     <h1>Wie können wir helfen?</h1>
@@ -35,36 +34,4 @@
     </div>
   </div>
   {% if schemaJson %}<script type="application/ld+json">{{ schemaJson | raw }}</script>{% endif %}
-  <script>
-  /* Ohne Und-Zeichen, spitze Klammern und doppelte Anführungszeichen: Ceres gibt das Widget zusätzlich maskiert aus, so läuft auch diese Kopie fehlerfrei.
-     Die Markierung data-osvw-bereit verhindert, dass die Suche doppelt angebunden wird. */
-  (function () {
-    var w = document.querySelector('[data-osvw-faq]'); if (!w) return;
-    if (w.getAttribute('data-osvw-bereit')) return; w.setAttribute('data-osvw-bereit', '1');
-    var feld = w.querySelector('[data-osvw-suche]'), anzeige = w.querySelector('[data-osvw-treffer]');
-    var fragen = [].slice.call(w.querySelectorAll('[data-osvw-frage]'));
-    var norm = function (s) { return s.toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss'); };
-    var texte = fragen.map(function (d) { return norm(d.textContent); });
-    function oeffneAusAdresse() {
-      var id = decodeURIComponent((location.hash || '').slice(1)); if (!id) return;
-      var d = document.getElementById(id);
-      if (d) { if (d.tagName === 'DETAILS') { d.open = true; } }
-    }
-    feld.addEventListener('input', function () {
-      var woerter = norm(feld.value).split(/\s+/).filter(function (x) { return !!x[1]; }), n = 0;
-      fragen.forEach(function (d, i) {
-        var passt = !woerter.length || woerter.every(function (x) { return texte[i].indexOf(x) !== -1; });
-        d.classList.toggle('osvw-aus', !passt); d.open = woerter.length ? passt : false; if (passt) n++;
-      });
-      [].forEach.call(w.querySelectorAll('[data-osvw-gruppe]'), function (g) {
-        var sichtbar = g.querySelectorAll('[data-osvw-frage]:not(.osvw-aus)').length;
-        g.classList.toggle('osvw-aus', !sichtbar);
-        var navi = w.querySelector('[data-osvw-navi=' + g.getAttribute('data-osvw-gruppe') + ']');
-        if (navi) navi.classList.toggle('osvw-aus', !sichtbar);
-      });
-      anzeige.textContent = woerter.length ? (n ? n + (n === 1 ? ' passende Antwort' : ' passende Antworten') : 'Keine passende Antwort. Schreiben Sie uns gern.') : '';
-    });
-    window.addEventListener('hashchange', oeffneAusAdresse); oeffneAusAdresse();
-  })();
-  </script>
 </div>

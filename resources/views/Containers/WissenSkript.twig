@@ -1,0 +1,34 @@
+<script>
+/* OSVWissen: Suche und Sprungmarken der FAQ-Seite. Steht auf jeder Seite, tut nur etwas, wenn das Widget da ist.
+ * Ereignisse hängen am document, damit sie auch greifen, wenn Vue das Widget neu aufbaut. */
+(function () {
+  if (window.osvWissen) return; window.osvWissen = 1;
+  var norm = function (s) { return s.toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss'); };
+  function suche(feld) {
+    var w = feld.closest('[data-osvw-faq]'); if (!w) return;
+    var woerter = norm(feld.value).split(/\s+/).filter(function (x) { return x.length > 1; }), n = 0;
+    [].forEach.call(w.querySelectorAll('[data-osvw-frage]'), function (d) {
+      var text = norm(d.textContent);
+      var passt = !woerter.length || woerter.every(function (x) { return text.indexOf(x) > -1; });
+      d.classList.toggle('osvw-aus', !passt); d.open = !!woerter.length && passt; if (passt) n++;
+    });
+    [].forEach.call(w.querySelectorAll('[data-osvw-gruppe]'), function (g) {
+      var sichtbar = g.querySelectorAll('[data-osvw-frage]:not(.osvw-aus)').length;
+      g.classList.toggle('osvw-aus', !sichtbar);
+      var navi = w.querySelector('[data-osvw-navi="' + g.getAttribute('data-osvw-gruppe') + '"]');
+      if (navi) navi.classList.toggle('osvw-aus', !sichtbar);
+    });
+    var anzeige = w.querySelector('[data-osvw-treffer]');
+    if (anzeige) anzeige.textContent = woerter.length ? (n ? n + (n === 1 ? ' passende Antwort' : ' passende Antworten') : 'Keine passende Antwort. Schreiben Sie uns gern.') : '';
+  }
+  document.addEventListener('input', function (e) {
+    var f = e.target; if (f && f.matches && f.matches('[data-osvw-suche]')) suche(f);
+  });
+  function oeffneAusAdresse() {
+    var id = decodeURIComponent((location.hash || '').slice(1)); var d = id && document.getElementById(id);
+    if (d && d.tagName === 'DETAILS') { d.open = true; d.scrollIntoView({ block: 'start' }); }
+  }
+  window.addEventListener('hashchange', oeffneAusAdresse);
+  if (document.readyState === 'complete') oeffneAusAdresse(); else window.addEventListener('load', oeffneAusAdresse);
+})();
+</script>
