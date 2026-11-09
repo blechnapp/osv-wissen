@@ -4,7 +4,7 @@
    » Plugin hinzufügen » Git » Neues Plugin:
    Remote-URL:  https://github.com/blechnapp/osv-wissen.git
    Benutzername/Passwort wie bei OSV Menü und OSV Badges
-   Branch: main  (nicht master)  » Speichern
+   Branch: master  (wie bei den anderen OSV-Plugins)  » Speichern
 
 2. Im Set 78 das Plugin „OSVWissen“ installieren und aktiv setzen.
    Im Git-Reiter des Plugins auf Tag  v0.1.0  stellen.
