@@ -1,37 +1,3 @@
-{% import "OSVWissen::Partials.Antwort" as a %}
+{# Gibt nur den Aufruf aus, die Texte liest osvw_faq() erst beim Seitenaufruf (siehe Extensions/WissenTwig.php). #}
 {% set customClass = widget.settings.customClass.mobile %}
-<div class="widget osvw{% if customClass | length > 0 %} {{ customClass }}{% endif %}" data-osvw-faq>
-  <div class="osvw-hero">
-    <h1>Wie können wir helfen?</h1>
-    <p>Antworten auf die Fragen, die uns am häufigsten erreichen. Nichts dabei? Wir sind {{ zeiten }} persönlich für Sie da.</p>
-    <div class="osvw-suche"><input type="search" placeholder="Stichwort suchen, z. B. Rücksendung, Ersatzteil, Gutschein" aria-label="Häufige Fragen durchsuchen" data-osvw-suche></div>
-    <div class="osvw-treffer" data-osvw-treffer aria-live="polite"></div>
-  </div>
-  <div class="osvw-koerper">
-    <aside class="osvw-nav">
-      <b>Themen</b>
-      {% for t in themen %}<a href="#hilfe-{{ t.id }}" data-osvw-navi="{{ t.id }}">{{ t.titel }}<em>{{ t.fragen | length }}</em></a>{% endfor %}
-      <div class="osvw-kontakt">
-        <strong>Nicht gefunden?</strong>
-        <p>Schreiben Sie uns, mit Auftragsnummer geht es schneller.</p>
-        <a class="osvw-knopf" href="{{ kontaktUrl }}">Kontakt aufnehmen</a>
-        <p class="osvw-tel"><a href="tel:{{ telefon | replace({' ': '', '-': ''}) }}">{{ telefon }}</a></p>
-      </div>
-    </aside>
-    <div>
-      {% for t in themen %}
-      <section class="osvw-gruppe" id="hilfe-{{ t.id }}" data-osvw-gruppe="{{ t.id }}">
-        <h2>{{ t.titel }}<span>{{ t.fragen | length }} {{ t.fragen | length == 1 ? 'Frage' : 'Fragen' }}</span></h2>
-        {% for b in t.fragen %}
-        <details id="{{ b.id }}" data-osvw-frage>
-          <summary>{{ b.frage }}</summary>
-          {{ a.antwort(b) }}
-        </details>
-        {% endfor %}
-      </section>
-      {% endfor %}
-      {% if videoKanal %}<p class="osvw-mehrvideo">Weitere Anleitungen aus der Werkstatt: <a href="{{ videoKanal }}" target="_blank" rel="noopener">unsere Videos auf YouTube</a></p>{% endif %}
-    </div>
-  </div>
-  {% if schemaJson %}<script type="application/ld+json">{{ schemaJson | raw }}</script>{% endif %}
-</div>
+<div class="widget osvw-widget{% if customClass | length > 0 %} {{ customClass }}{% endif %}">{% verbatim %}{{ osvw_faq() }}{% endverbatim %}</div>

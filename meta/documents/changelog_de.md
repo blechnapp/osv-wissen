@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.0 (09.11.2026)
+- Widgets geben nur noch den Aufruf `osvw_faq()` bzw. `osvw_kurzhilfe()` aus, die Texte werden erst beim Seitenaufruf gelesen. Bisher fror der ShopBuilder den Stand beim Speichern ein (alte Texte, alte Skripte, maskierte FAQPage-Daten, doppelter Footer).
+- FAQPage-Daten kommen über den Container „OSV Wissen Suche“ am Seitenende, nur auf der FAQ-Seite.
+- Neue Einstellung „Adresse der FAQ-Seite“ (für den Link der Kurzhilfe).
+- Nach dem Update: Widget im ShopBuilder einmal entfernen, neu einsetzen, speichern.
+
 ## 0.2.0 (09.11.2026)
 - CSS und Suchskript aus den Widgets in zwei Container verlegt: „OSV Wissen Stil“ (Ceres::Template.Style) und „OSV Wissen Suche“ (Ceres::Script.AfterScriptsLoaded). `<style>` und `<script>` im Widget brachten die Vue-Hydrierung durcheinander, auf der FAQ-Seite erschien der Footer doppelt.
 - Suche hängt jetzt am document und greift auch nach einem Neuaufbau durch Vue.

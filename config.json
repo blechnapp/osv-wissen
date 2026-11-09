@@ -4,16 +4,59 @@
     "Kontakt": {
       "label": "Kontakt",
       "formFields": {
-        "kontaktUrl": {"type": "text", "required": false, "label": "Adresse der Kontaktseite", "options": {"defaultValue": "/kontakt/"}},
-        "telefon": {"type": "text", "required": false, "label": "Telefon (Anzeige)", "options": {"defaultValue": "+49 37362 774-0"}},
-        "servicezeiten": {"type": "text", "required": false, "label": "Servicezeiten (Anzeige)", "options": {"defaultValue": "Mo–Fr 10–16 Uhr"}}
+        "kontaktUrl": {
+          "type": "text",
+          "required": false,
+          "label": "Adresse der Kontaktseite",
+          "options": {
+            "defaultValue": "/kontakt/"
+          }
+        },
+        "telefon": {
+          "type": "text",
+          "required": false,
+          "label": "Telefon (Anzeige)",
+          "options": {
+            "defaultValue": "+49 37362 774-0"
+          }
+        },
+        "servicezeiten": {
+          "type": "text",
+          "required": false,
+          "label": "Servicezeiten (Anzeige)",
+          "options": {
+            "defaultValue": "Mo–Fr 10–16 Uhr"
+          }
+        }
       }
     },
     "Faq": {
       "label": "FAQ-Seite",
       "formFields": {
-        "schema": {"type": "checkBox", "required": false, "label": "Strukturierte Daten FAQPage ausgeben", "options": {"defaultValue": "true"}},
-        "videoKanal": {"type": "text", "required": false, "label": "Adresse des YouTube-Kanals", "options": {"defaultValue": "https://www.youtube.com/channel/UC55qqOuVezJhwKjXpJV8irg"}}
+        "faqUrl": {
+          "type": "text",
+          "required": false,
+          "label": "Adresse der FAQ-Seite (für die Kurzhilfe)",
+          "options": {
+            "defaultValue": "/faq/"
+          }
+        },
+        "schema": {
+          "type": "checkBox",
+          "required": false,
+          "label": "Strukturierte Daten FAQPage ausgeben",
+          "options": {
+            "defaultValue": "true"
+          }
+        },
+        "videoKanal": {
+          "type": "text",
+          "required": false,
+          "label": "Adresse des YouTube-Kanals",
+          "options": {
+            "defaultValue": "https://www.youtube.com/channel/UC55qqOuVezJhwKjXpJV8irg"
+          }
+        }
       }
     }
   }

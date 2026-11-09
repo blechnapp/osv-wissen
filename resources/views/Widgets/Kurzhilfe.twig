@@ -1,12 +1,3 @@
-{% import "OSVWissen::Partials.Antwort" as a %}
+{# Gibt nur den Aufruf aus, die Texte liest osvw_kurzhilfe() erst beim Seitenaufruf (siehe Extensions/WissenTwig.php). #}
 {% set customClass = widget.settings.customClass.mobile %}
-{% if fragen | length > 0 %}
-<div class="widget osvw osvw-kurz{% if customClass | length > 0 %} {{ customClass }}{% endif %}">
-  <h2>Schnelle Hilfe</h2>
-  <p>Die häufigsten Anliegen, sofort beantwortet. Passt nichts, schreiben Sie uns einfach unten.</p>
-  {% for b in fragen %}
-  <details id="kurz-{{ b.id }}"><summary>{{ b.frage }}</summary>{{ a.antwort(b) }}</details>
-  {% endfor %}
-  <a class="osvw-alle" href="{{ faqUrl }}">Alle häufigen Fragen ansehen ›</a>
-</div>
-{% endif %}
+<div class="widget osvw-widget{% if customClass | length > 0 %} {{ customClass }}{% endif %}">{% verbatim %}{{ osvw_kurzhilfe() }}{% endverbatim %}</div>

@@ -21,3 +21,6 @@ Nach jeder Änderung: `python3 werkzeug/erzeugen.py` (prüft und schreibt `src/D
 ## Für andere Plugins
 `OSVWissen\Services\WissenService`: `faq()`, `kontakt()`, `fuerKategorien(array $ids)`. Abgelaufene Bausteine (`bis`) fallen überall heraus.
 Später kommt die Pflegemaske (PWA-Shop); dann ändert sich nur, woher der Service liest.
+
+## Wie die Texte in den Shop kommen
+Das Widget speichert nur den Aufruf `osvw_faq()` (bzw. `osvw_kurzhilfe()`). Die Texte liest das Plugin bei jedem Seitenaufruf aus `daten/wissen.json`. Neue Texte wirken nach dem Bereitstellen, ohne den ShopBuilder anzufassen.

@@ -7,8 +7,6 @@ use Ceres\Widgets\Helper\Factories\WidgetDataFactory;
 use Ceres\Widgets\Helper\WidgetCategories;
 use Ceres\Widgets\Helper\Factories\WidgetSettingsFactory;
 use Ceres\Widgets\Helper\WidgetTypes;
-use OSVWissen\Services\WissenService;
-use Plenty\Plugin\ConfigRepository;
 
 class KurzhilfeWidget extends BaseWidget
 {
@@ -35,15 +33,4 @@ class KurzhilfeWidget extends BaseWidget
         return $settings->toArray();
     }
 
-    protected function getTemplateData($widgetSettings, $isPreview)
-    {
-        /** @var WissenService $wissen */
-        $wissen = pluginApp(WissenService::class);
-        /** @var ConfigRepository $config */
-        $config = pluginApp(ConfigRepository::class);
-        return [
-            'fragen' => $wissen->kontakt(),
-            'faqUrl' => '/faq/',
-        ];
-    }
 }

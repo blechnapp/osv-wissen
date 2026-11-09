@@ -1,4 +1,4 @@
-# Lokale Vorschau: rendert die echten Twig-Vorlagen mit Jinja2 und denselben Regeln wie WissenService.
+# Lokale Vorschau: rendert die echten Twig-Vorlagen (Inhalt/, so wie osvw_faq() und osvw_kurzhilfe() im Shop) mit Jinja2 und denselben Regeln wie WissenService.
 # Ergebnis: vorschau/faq.html und vorschau/kontakt.html (nicht im Git).
 import json, pathlib, re, datetime, jinja2
 P = pathlib.Path(__file__).resolve().parent.parent
@@ -36,6 +36,6 @@ widget = {"settings": {"customClass": {"mobile": ""}}}
 beilage = env.get_template('OSVWissen::Partials.Stil').render() + env.get_template('OSVWissen::Containers.WissenSkript').render()
 rahmen = '<!doctype html><html lang=de><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>{t}</title><style>body{{margin:0;font-family:-apple-system,Helvetica,Arial,sans-serif;background:#fff}}.kopf{{background:#0c2a5e;color:#fff;padding:14px 16px;font-weight:700}}.inhalt{{max-width:1200px;margin:0 auto;padding:24px 16px}}</style><body><div class=kopf>Vorschau OSVWissen · {t} (lokal, nicht der Shop)</div><div class=inhalt>{x}</div>{b}</body></html>'
 (P / "vorschau").mkdir(exist_ok=True)
-(P / "vorschau/faq.html").write_text(rahmen.format(t="Häufige Fragen", b=beilage, x=env.get_template("OSVWissen::Widgets.Faq").render(widget=widget, themen=themen, anzahl=len(faq), schemaJson=schema, kontaktUrl="/kontakt/", telefon="+49 37362 774-0", zeiten="Mo–Fr 10–16 Uhr", videoKanal="https://www.youtube.com/channel/UC55qqOuVezJhwKjXpJV8irg")))
-(P / "vorschau/kontakt.html").write_text(rahmen.format(t="Kurzhilfe Kontaktseite", b=beilage, x=env.get_template("OSVWissen::Widgets.Kurzhilfe").render(widget=widget, fragen=ort("kontakt"), faqUrl="faq.html")))
+(P / "vorschau/faq.html").write_text(rahmen.format(t="Häufige Fragen", b=beilage, x=env.get_template("OSVWissen::Inhalt.Faq").render(themen=themen, kontaktUrl="/kontakt/", telefon="+49 37362 774-0", zeiten="Mo–Fr 10–16 Uhr", videoKanal="https://www.youtube.com/channel/UC55qqOuVezJhwKjXpJV8irg")))
+(P / "vorschau/kontakt.html").write_text(rahmen.format(t="Kurzhilfe Kontaktseite", b=beilage, x=env.get_template("OSVWissen::Inhalt.Kurzhilfe").render(fragen=ort("kontakt"), faqUrl="faq.html")))
 print("Vorschau:", P / "vorschau/faq.html")
