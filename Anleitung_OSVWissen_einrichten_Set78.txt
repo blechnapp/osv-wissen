@@ -1,0 +1,28 @@
+===== PLUGIN „OSV WISSEN“ EINRICHTEN – NUR IM TEST-SET 78 =====
+
+1. Plugins » Plugin-Set-Übersicht » Set 78 öffnen
+   » Plugin hinzufügen » Git » Neues Plugin:
+   Remote-URL:  https://github.com/blechnapp/osv-wissen.git
+   Benutzername/Passwort wie bei OSV Menü und OSV Badges
+   Branch: main  (nicht master)  » Speichern
+
+2. Im Set 78 das Plugin „OSVWissen“ installieren und aktiv setzen.
+   Im Git-Reiter des Plugins auf Tag  v0.1.0  stellen.
+   Container-Verknüpfungen gibt es keine. Konfiguration: nichts ändern.
+
+3. Set 78 bereitstellen und abwarten, bis Plenty fertig meldet (kann über 10 Minuten dauern).
+   Kommt ein Fehler beim Bereitstellen: Bild davon an mich, nichts weiter anfassen.
+
+4. Neue Kategorie „Häufige Fragen“ anlegen, genauso eingestellt wie „Gewinnspiel“ (ID 258):
+   Typ Inhalt, Hauptkategorie, Linkliste Nein, sichtbar für alle, Mandant Original Seiffener Volkskunst,
+   Name „Häufige Fragen“, URL-Name  faq
+   Hinweis: Kategorien gelten für alle Sets. Live bleibt die Seite leer und ist nirgends verlinkt.
+
+5. ShopBuilder im Set 78 öffnen » Kategorie „Häufige Fragen“:
+   Widget „OSV Häufige Fragen“ (steht bei den Text-Widgets) hineinziehen, sonst nichts. Speichern.
+
+6. Die Vorschau von Set 78 öffnen und /faq/ aufrufen, Link an mich. Ich prüfe Rechner und Handy.
+
+NICHT in diesem Schritt:
+- Set 72 (live) und Set 79 (Backup) nicht anfassen.
+- Kontaktseite noch nicht ändern. Das Widget „OSV Kurzhilfe“ kommt erst, wenn /faq/ in Set 78 passt.
