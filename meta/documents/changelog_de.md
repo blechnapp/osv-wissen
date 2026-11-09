@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.2 (09.11.2026)
+- FAQ-Suche: Skript ohne Zeichen, die Ceres maskiert. Ceres gibt Widget-Inhalte zusätzlich maskiert aus, die Kopie warf „Unexpected token '&'“. Doppelte Anbindung der Suche verhindert.
+
 ## 0.1.1 (09.11.2026)
 - Suchwörter für die Widget-Suche im ShopBuilder (osv, faq, fragen, hilfe, kurzhilfe, kontakt, wissen).
 
