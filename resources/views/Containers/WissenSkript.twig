@@ -18,6 +18,7 @@
       var navi = w.querySelector('[data-osvw-navi="' + g.getAttribute('data-osvw-gruppe') + '"]');
       if (navi) navi.classList.toggle('osvw-aus', !sichtbar);
     });
+    w.classList.toggle('osvw-gesucht', !!woerter.length);
     var anzeige = w.querySelector('[data-osvw-treffer]');
     if (anzeige) anzeige.textContent = woerter.length ? (n ? n + (n === 1 ? ' passende Antwort' : ' passende Antworten') : 'Keine passende Antwort. Schreiben Sie uns gern.') : '';
   }

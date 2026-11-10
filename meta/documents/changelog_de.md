@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1 (10.11.2026)
+- Box „Nicht gefunden?“: Text „Schreiben Sie uns, wir helfen gern weiter.“ (Satz zur Auftragsnummer gestrichen, im Kontaktformular ist sie freiwillig).
+- Handy: Knopf „Kontakt aufnehmen“ war weiß auf weiß (Regel der Themenliste griff mit), jetzt dunkelblau. Die Box erscheint am Handy nur nach einer Suche, unter den Treffern.
+
 ## 0.4.0 (10.11.2026)
 - FAQ-Seite: Abstand zum Menü, Breite wie der Shop (1300 px).
 - Kontaktwege oben in der Box: Chat (nur wenn Tawk geladen ist, öffnet den Chat), E-Mail, Kontaktformular, Telefon.

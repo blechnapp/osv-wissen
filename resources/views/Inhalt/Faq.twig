@@ -20,12 +20,12 @@
       {% for t in themen %}<a href="#hilfe-{{ t.id }}" data-osvw-navi="{{ t.id }}">{{ t.titel }}<em>{{ t.fragen | length }}</em></a>{% endfor %}
       <div class="osvw-kontakt">
         <strong>Nicht gefunden?</strong>
-        <p>Schreiben Sie uns, mit Auftragsnummer geht es schneller.</p>
+        <p>Schreiben Sie uns, wir helfen gern weiter.</p>
         <a class="osvw-knopf" href="{{ kontaktUrl }}">Kontakt aufnehmen</a>
         <p class="osvw-tel"><a href="tel:{{ telefon | replace({' ': '', '-': ''}) }}">{{ telefon }}</a></p>
       </div>
     </aside>
-    <div>
+    <div class="osvw-inhalt">
       {% for t in themen %}
       <section class="osvw-gruppe" id="hilfe-{{ t.id }}" data-osvw-gruppe="{{ t.id }}">
         <h2>{{ t.titel }}<span>{{ t.fragen | length }} {{ t.fragen | length == 1 ? 'Frage' : 'Fragen' }}</span></h2>
