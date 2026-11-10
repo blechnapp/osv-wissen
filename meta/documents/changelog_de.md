@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.4.2 (10.11.2026)
+- Text „Mein Lichterbogen leuchtet nicht“: USB-C Netzteil statt Netzteil mit Adapter USB A auf C (Jasmin).
+
 ## 0.4.1 (10.11.2026)
 - Box „Nicht gefunden?“: Text „Schreiben Sie uns, wir helfen gern weiter.“ (Satz zur Auftragsnummer gestrichen, im Kontaktformular ist sie freiwillig).
 - Handy: Knopf „Kontakt aufnehmen“ war weiß auf weiß (Regel der Themenliste griff mit), jetzt dunkelblau. Die Box erscheint am Handy nur nach einer Suche, unter den Treffern.
