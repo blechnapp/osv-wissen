@@ -2,7 +2,7 @@
   "name": "OSVWissen",
   "namespace": "OSVWissen",
   "type": "general",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "license": "proprietary",
   "author": "OSV",
   "shortDescription": "Hilfetexte aus einer Quelle: FAQ-Seite, Kurzhilfe auf der Kontaktseite, später Anleitung und Pflege auf der Artikelseite.",

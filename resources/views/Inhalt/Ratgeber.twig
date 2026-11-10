@@ -1,0 +1,42 @@
+{% import "OSVWissen::Partials.Video" as vd %}
+<div class="osvw osvw-seite osvw-rg">
+  <div class="osvw-rg-kopf">
+    <div>
+      <em class="osvw-rg-marke">{{ r.marke }}</em>
+      <h1>{{ r.titel }}</h1>
+      {% if r.einleitung %}<p class="osvw-rg-einl">{{ r.einleitung }}</p>{% endif %}
+      <small class="osvw-rg-zeit">{{ r.lesezeit }} Min. Lesezeit</small>
+    </div>
+    <span class="osvw-rg-kopfbild"><img src="{{ r.bild }}" alt="" width="450" height="450"></span>
+  </div>
+  <div class="osvw-rg-koerper">
+    <div class="osvw-rg-text">
+      {% for a in r.abschnitte %}
+      <h2>{{ a.titel }}</h2>
+      <div class="osvw-a">{% for x in a.bloecke %}{% if x.typ == 'ul' %}<ul>{% for punkt in x.punkte %}<li>{{ punkt }}</li>{% endfor %}</ul>{% elseif x.typ == 'link' %}<p><a href="{{ x.url }}">{{ x.text }}</a></p>{% else %}<p>{{ x.text }}</p>{% endif %}{% endfor %}</div>
+      {% endfor %}
+      {% if r.kasten is defined and r.kasten %}
+      <div class="osvw-hinweis osvw-rg-kasten"><strong>{{ r.kasten.titel }}</strong><p>{{ r.kasten.text }}</p></div>
+      {% endif %}
+    </div>
+    <aside class="osvw-rg-seite">
+      {% if r.videoDaten %}<div class="osvw-rg-video"><b>Im Video</b>{{ vd.karte(r.videoDaten, plugin_path('OSVWissen') ~ '/images/video/') }}</div>{% endif %}
+      {% for x in r.dazu %}
+      <div class="osvw-rg-dazu"><b>{{ x.titel }}</b><p>{{ x.text }}</p><a href="{{ x.url }}">{{ x.linktext }} ›</a></div>
+      {% endfor %}
+    </aside>
+  </div>
+  <h2 class="osvw-rg-weitere">Weitere Ratgeber</h2>
+  <div class="osvw-rg-raster osvw-rg-klein">
+    {% for w in liste %}{% if w.id != r.id %}
+    <a class="osvw-rg-karte" href="{{ basis }}{{ w.id }}/">
+      <span class="osvw-rg-bild"><img src="{{ w.bild }}" alt="" width="450" height="450" loading="lazy"></span>
+      <span class="osvw-rg-txt"><em>{{ w.marke }}</em><b>{{ w.titel }}</b><small>{{ w.lesezeit }} Min. Lesezeit</small></span>
+    </a>
+    {% endif %}{% endfor %}
+  </div>
+  <div class="osvw-hinweis">
+    <strong>Noch Fragen?</strong>
+    <p>Rufen Sie an, {{ zeiten }}, unter <a href="tel:{{ telefon | replace({' ': '', '-': ''}) }}">{{ telefon }}</a>, oder schauen Sie in die <a href="{{ faqUrl }}">häufigen Fragen</a>.</p>
+  </div>
+</div>

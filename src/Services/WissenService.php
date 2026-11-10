@@ -80,6 +80,65 @@ class WissenService
         return $themen;
     }
 
+    /** Videos in fester Reihenfolge (Vorschaubild liegt im Plugin unter images/video/<youtube>.webp). */
+    public function videos(): array
+    {
+        return $this->daten()['videos'] ?? [];
+    }
+
+    private function woerter(string $text): int
+    {
+        $text = trim($text);
+        return $text === '' ? 0 : count(preg_split('/\s+/u', $text));
+    }
+
+    /** Ratgeber für die Übersicht: id, titel, kurz, marke, bild, lesezeit. */
+    public function ratgeberListe(): array
+    {
+        $liste = [];
+        foreach ($this->daten()['ratgeber'] ?? [] as $r) {
+            $voll = $this->ratgeber($r['id']);
+            $liste[] = ['id' => $r['id'], 'titel' => $r['titel'], 'kurz' => $r['kurz'], 'marke' => $r['marke'],
+                'bild' => $r['bild'], 'lesezeit' => $voll['lesezeit']];
+        }
+        return $liste;
+    }
+
+    /** Ein Ratgeber mit fertigen Abschnitten (Texte aus den Bausteinen), Video und Lesezeit; null, wenn es ihn nicht gibt. */
+    public function ratgeber(string $id): ?array
+    {
+        $bausteine = [];
+        foreach ($this->daten()['bausteine'] as $b) {
+            $bausteine[$b['id']] = $b;
+        }
+        foreach ($this->daten()['ratgeber'] ?? [] as $r) {
+            if ($r['id'] !== $id) {
+                continue;
+            }
+            $woerter = $this->woerter((string)($r['einleitung'] ?? ''));
+            $abschnitte = [];
+            foreach ($r['abschnitte'] as $a) {
+                $absaetze = isset($a['baustein']) ? ($bausteine[$a['baustein']]['absaetze'] ?? []) : ($a['absaetze'] ?? []);
+                if (!empty($a['liste'])) {
+                    $absaetze = array_map(function ($x) { return substr((string)$x, 0, 2) === '- ' || preg_match('#^https?://#', (string)$x) ? $x : '- ' . $x; }, $absaetze);
+                }
+                $fertig = $this->aufbereiten(['absaetze' => $absaetze]);
+                $woerter += $this->woerter($fertig['klartext']);
+                $abschnitte[] = ['titel' => $a['titel'], 'bloecke' => $fertig['bloecke']];
+            }
+            $r['abschnitte'] = $abschnitte;
+            $r['lesezeit'] = max(1, (int)ceil($woerter / 180));
+            $r['videoDaten'] = null;
+            foreach ($this->videos() as $v) {
+                if (($r['video'] ?? '') === $v['youtube']) {
+                    $r['videoDaten'] = $v;
+                }
+            }
+            return $r;
+        }
+        return null;
+    }
+
     public function kontakt(): array
     {
         return $this->fuerOrt('kontakt');

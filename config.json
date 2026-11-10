@@ -64,6 +64,22 @@
           "options": {
             "defaultValue": "https://www.youtube.com/channel/UC55qqOuVezJhwKjXpJV8irg"
           }
+        },
+        "ratgeberUrl": {
+          "type": "text",
+          "required": false,
+          "label": "Adresse der Ratgeber-Übersicht (leer = kein Link)",
+          "options": {
+            "defaultValue": "/ratgeber/"
+          }
+        },
+        "videosUrl": {
+          "type": "text",
+          "required": false,
+          "label": "Adresse der Videoseite (leer = kein Link)",
+          "options": {
+            "defaultValue": "/videos/"
+          }
         }
       }
     }

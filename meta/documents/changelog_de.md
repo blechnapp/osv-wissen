@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.0 (10.11.2026)
+- Neues Widget „OSV Videos“: Seite mit sechs Filmen (Anleitung, Hilfe, Werkstatt, Besuch), Vorschaubilder liegen im Plugin, ein Klick öffnet das Video in einem neuen Fenster auf YouTube. Auf der Seite selbst lädt nichts von YouTube.
+- Neues Widget „OSV Ratgeber“ mit Auswahl „Was soll angezeigt werden?“: Übersicht „Gut zu wissen“ oder einer von fünf Ratgebern (Räuchermännchen anzünden, Holzkunst pflegen, Pyramide dreht nicht, Lichterbogen leuchtet nicht, Nussknacker). Die Texte kommen aus den geprüften FAQ-Bausteinen, Lesezeit rechnet das Plugin.
+- Neue Einstellungen „Adresse der Ratgeber-Übersicht“ (/ratgeber/) und „Adresse der Videoseite“ (/videos/).
+- Bilder in den Karten mit fester Höhe, Silbentrennung in Überschriften.
+
 ## 0.4.2 (10.11.2026)
 - Text „Mein Lichterbogen leuchtet nicht“: USB-C Netzteil statt Netzteil mit Adapter USB A auf C (Jasmin).
 

@@ -7,6 +7,8 @@ Alle Hilfetexte des Shops aus **einer** Quelle. Kein Text steht doppelt.
 2. Container-Verknüpfungen im Plugin-Set: „OSV Wissen Stil“ → Ceres::Template.Style, „OSV Wissen Suche“ → Ceres::Script.AfterScriptsLoaded. Ohne die beiden fehlen Gestaltung und Suche.
 3. ShopBuilder → neue Inhaltskategorie „Häufige Fragen“ mit der Adresse `/faq/`, Widget **OSV Häufige Fragen** hineinziehen, speichern.
 4. Kontaktseite: Widget **OSV Kurzhilfe** oberhalb des Formulars einfügen.
+5. Inhaltskategorie „Videos“ mit der Adresse `/videos/`, Widget **OSV Videos**.
+6. Inhaltskategorie „Gut zu wissen“ mit der Adresse `/ratgeber/`, Widget **OSV Ratgeber**, Auswahl „Übersicht“. Darunter je Ratgeber eine Unterkategorie, URL-Name = Ratgeber-ID (z. B. `pyramide-dreht-nicht`), Widget **OSV Ratgeber** mit diesem Ratgeber ausgewählt.
 
 ## Bausteine
 `daten/wissen.json`, je Baustein:

@@ -1,0 +1,16 @@
+{% import "OSVWissen::Partials.Video" as vd %}
+{% set bild = plugin_path('OSVWissen') ~ '/images/video/' %}
+<div class="osvw osvw-seite">
+  <div class="osvw-kopf">
+    <h1>Videos aus der Werkstatt</h1>
+    <p>Zusehen, wie es gemacht wird, und nachsehen, wenn etwas klemmt. Alle Filme laufen auf unserem YouTube-Kanal.</p>
+    {% if kanal %}<a class="osvw-kanal" href="{{ kanal }}" target="_blank" rel="noopener">Zum YouTube-Kanal ↗</a>{% endif %}
+  </div>
+  <div class="osvw-vd-raster">
+    {% for v in videos %}{{ vd.karte(v, bild) }}{% endfor %}
+  </div>
+  <div class="osvw-hinweis">
+    <strong>Etwas klemmt und Sie finden kein Video dazu?</strong>
+    <p>Rufen Sie an, {{ zeiten }}, unter <a href="tel:{{ telefon | replace({' ': '', '-': ''}) }}">{{ telefon }}</a>, oder schauen Sie in die <a href="{{ faqUrl }}">häufigen Fragen</a>{% if ratgeberUrl %} und in den <a href="{{ ratgeberUrl }}">Ratgeber</a>{% endif %}.</p>
+  </div>
+</div>

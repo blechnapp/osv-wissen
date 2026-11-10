@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-09",
+ "stand": "2026-11-10",
  "themen": [
   {
    "id": "zahlung",
@@ -561,6 +561,232 @@
    ],
    "kategorien": [],
    "bis": "2026-12-22"
+  }
+ ],
+ "videos": [
+  {
+   "youtube": "0UwywKvydOQ",
+   "titel": "Die Funktion eines Räuchermännchens",
+   "text": "Wie der Rauch durch den hohlen Körper zieht, in einer Minute erklärt.",
+   "marke": "Anleitung",
+   "dazu": [
+    {
+     "text": "Räucherkerzen",
+     "url": "/kerzen-und-raeucherkerzen/raeucherkerzen/"
+    },
+    {
+     "text": "Räuchermännchen",
+     "url": "/weihnachten/raeuchermaennchen/"
+    }
+   ]
+  },
+  {
+   "youtube": "Kw1tM3QJ6i8",
+   "titel": "Pyramide dreht nicht? Tipps, wie man sie wieder zum Drehen bekommt",
+   "text": "Teelicht, Lager, Flügelstellung, Zugluft: die Ursachen der Reihe nach.",
+   "marke": "Hilfe",
+   "dazu": [
+    {
+     "text": "Weihnachtspyramiden",
+     "url": "/weihnachten/weihnachtspyramiden/"
+    },
+    {
+     "text": "Ersatzteile",
+     "url": "/ersatzteile/"
+    }
+   ]
+  },
+  {
+   "youtube": "J_Ni6oY0eB0",
+   "titel": "Daniel aus der Schauwerkstatt im Zuschnitt für einen Nussknacker",
+   "text": "Der erste Arbeitsgang: aus dem Brett wird der Rohling.",
+   "marke": "Werkstatt",
+   "dazu": [
+    {
+     "text": "Nussknacker",
+     "url": "/weihnachten/nussknacker/"
+    }
+   ]
+  },
+  {
+   "youtube": "WT0_7RSkIaE",
+   "titel": "Pyramide, Daniel aus der Schauwerkstatt",
+   "text": "Wie eine Pyramide entsteht, vom Drechseln bis zur Montage.",
+   "marke": "Werkstatt",
+   "dazu": [
+    {
+     "text": "Weihnachtspyramiden",
+     "url": "/weihnachten/weihnachtspyramiden/"
+    }
+   ]
+  },
+  {
+   "youtube": "MmELAn-QdG8",
+   "titel": "Nussknacker knackt eine Nuss",
+   "text": "Ob unsere Nussknacker das können, und warum wir trotzdem davon abraten.",
+   "marke": "Werkstatt",
+   "dazu": [
+    {
+     "text": "Nussknacker",
+     "url": "/weihnachten/nussknacker/"
+    }
+   ]
+  },
+  {
+   "youtube": "5zEsXvpWuP0",
+   "titel": "Ladengeschäft und Bastelwerkstatt",
+   "text": "Ein Rundgang durch den Laden in Seiffen und die Bastelwerkstatt mit 30 Plätzen.",
+   "marke": "Besuch",
+   "dazu": [],
+   "pruefen": "Anzahl Plätze Bastelwerkstatt (30) aus dem Entwurf, nicht geprüft"
+  }
+ ],
+ "ratgeber": [
+  {
+   "id": "raeuchermaennchen-anzuenden",
+   "titel": "Räuchermännchen richtig anzünden",
+   "kurz": "Wie der Rauch durch den Körper zieht, und was zu tun ist, wenn er es nicht tut.",
+   "marke": "Anleitung",
+   "bild": "https://cdn02.plentyone.com/uugltyeuze37/item/images/178/middle/12301-1-raeuchermann-traditionswichtel-im-roten-gewand-mit-roter-zipfelmuetze-mit-weissem-zwergenbart-und-mit-pfeife.jpg",
+   "einleitung": "Damit der Rauch den Weg nach oben findet, kommt es auf ein paar Kleinigkeiten an.",
+   "abschnitte": [
+    {
+     "titel": "So geht es",
+     "baustein": "benutzung-12"
+    },
+    {
+     "titel": "Es raucht nicht richtig, was tun?",
+     "baustein": "benutzung-13"
+    }
+   ],
+   "kasten": {
+    "titel": "Wo Räucherkerzen lagern",
+    "text": "Trocken und nicht zu warm. Eine angebrochene Packung im feuchten Keller ist im nächsten Jahr oft nicht mehr zu gebrauchen."
+   },
+   "video": "0UwywKvydOQ",
+   "dazu": [
+    {
+     "titel": "Dazu passend",
+     "text": "Räucherkerzen in verschiedenen Duftrichtungen.",
+     "linktext": "Räucherkerzen ansehen",
+     "url": "/kerzen-und-raeucherkerzen/raeucherkerzen/"
+    },
+    {
+     "titel": "Ersatzteile",
+     "text": "Pfeife verloren, Bart abgebrochen? Für unsere eigenen Figuren führen wir Ersatzteile.",
+     "linktext": "Zu den Ersatzteilen",
+     "url": "/ersatzteile/"
+    }
+   ],
+   "pruefen": "Einleitung und Kasten aus dem Entwurf (claude design)"
+  },
+  {
+   "id": "holzkunst-pflegen",
+   "titel": "Holzkunst richtig pflegen",
+   "kurz": "Sonne, Heizungsluft, feuchte Keller: was Holzfiguren wirklich schadet.",
+   "marke": "Pflege",
+   "bild": "https://cdn02.plentyone.com/uugltyeuze37/item/images/241/middle/11611-2-nussknacker-koenig-als-baumbehang-im-blauen-gewand-mit-goldener-krone-mit-aufhaengung.jpg",
+   "einleitung": "Erzgebirgische Figuren halten Generationen, wenn man ein paar Dinge beachtet.",
+   "abschnitte": [
+    {
+     "titel": "Richtig pflegen",
+     "baustein": "benutzung-17"
+    },
+    {
+     "titel": "Woraus unsere Stücke sind",
+     "baustein": "herstellung-34"
+    }
+   ],
+   "kasten": {
+    "titel": "Einlagern über den Sommer",
+    "text": "Am besten im Originalkarton, an einem trockenen Ort mit gleichmäßiger Temperatur. Nicht in Folie einwickeln, darunter sammelt sich Feuchtigkeit."
+   },
+   "dazu": [
+    {
+     "titel": "Etwas beschädigt?",
+     "text": "Für Artikel aus unserer laufenden Produktion bieten wir Ersatzteile und Reparaturen an.",
+     "linktext": "Ersatzteile und Reparatur",
+     "url": "/faq/#ersatzteile-11"
+    }
+   ],
+   "pruefen": "Einleitung und Kasten (Einlagern, Folie) aus dem Entwurf, Werkstatt prüfen"
+  },
+  {
+   "id": "pyramide-dreht-nicht",
+   "titel": "Wenn die Pyramide sich nicht dreht",
+   "kurz": "Neun Dinge, die Sie prüfen können, vom Teelicht bis zur Flügelstellung.",
+   "marke": "Hilfe",
+   "bild": "https://cdn02.plentyone.com/uugltyeuze37/item/images/204/middle/16251-erzgebirgische-bogenpyramide-aus-holz-mit-weihnachtsmann-in-rotem-mantel-geschenkeschlitten-und-gruenem-spanbaum-dekoriert.jpg",
+   "einleitung": "Dreht sich Ihre Teelichtpyramide nicht richtig, prüfen Sie diese Punkte der Reihe nach.",
+   "abschnitte": [
+    {
+     "titel": "Das können Sie prüfen",
+     "baustein": "benutzung-14",
+     "liste": true
+    },
+    {
+     "titel": "Sind die Figuren befestigt?",
+     "baustein": "benutzung-16"
+    }
+   ],
+   "video": "Kw1tM3QJ6i8",
+   "dazu": [
+    {
+     "titel": "Ersatzteile",
+     "text": "Für unsere eigenen Pyramiden führen wir Ersatzteile.",
+     "linktext": "Zu den Ersatzteilen",
+     "url": "/ersatzteile/"
+    }
+   ]
+  },
+  {
+   "id": "lichterbogen-leuchtet-nicht",
+   "titel": "Lichterbogen leuchtet nicht",
+   "kurz": "Meistens liegt es am Netzteil. Was Sie zuerst probieren sollten.",
+   "marke": "Hilfe",
+   "bild": "https://cdn02.plentyone.com/uugltyeuze37/item/images/197/middle/15376-holzlichterbogen-naturfarbener-leuchterbogen-aus-dem-erzgebirge-led-weihnachtsmann-mit-geschenkeschlitten-und-sechs-gruene-baeume.jpg",
+   "einleitung": "",
+   "abschnitte": [
+    {
+     "titel": "Zuerst das Netzteil prüfen",
+     "baustein": "benutzung-15"
+    },
+    {
+     "titel": "Sind die Figuren befestigt?",
+     "baustein": "benutzung-16"
+    }
+   ],
+   "dazu": [
+    {
+     "titel": "Lichterbögen",
+     "text": "Alle Lichterbögen aus unserem Sortiment.",
+     "linktext": "Lichterbögen ansehen",
+     "url": "/weihnachten/schwibbogen/"
+    }
+   ]
+  },
+  {
+   "id": "nussknacker",
+   "titel": "Warum Nussknacker keine Nüsse knacken",
+   "kurz": "Eine ehrliche Antwort auf eine Frage, die uns oft gestellt wird.",
+   "marke": "Wissen",
+   "bild": "https://cdn02.plentyone.com/uugltyeuze37/item/images/139/middle/11202-2-nussknacker-husar-in-blauer-uniform-mit-husarenmuetze-und-goldenem-saebel-jpg.jpg",
+   "einleitung": "",
+   "abschnitte": [
+    {
+     "titel": "Dekoration, kein Werkzeug",
+     "baustein": "benutzung-18"
+    }
+   ],
+   "video": "MmELAn-QdG8",
+   "dazu": [
+    {
+     "titel": "Nussknacker",
+     "text": "Unsere Nussknacker aus dem Erzgebirge.",
+     "linktext": "Nussknacker ansehen",
+     "url": "/weihnachten/nussknacker/"
+    }
+   ]
   }
  ]
 }

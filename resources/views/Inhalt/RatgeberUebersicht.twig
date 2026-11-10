@@ -1,0 +1,19 @@
+<div class="osvw osvw-seite">
+  <div class="osvw-kopf">
+    <h1>Gut zu wissen</h1>
+    <p>Antworten aus der Werkstatt: wie unsere Stücke funktionieren, was ihnen guttut und was zu tun ist, wenn etwas klemmt.</p>
+  </div>
+  <div class="osvw-rg-raster">
+    {% for r in liste %}
+    <a class="osvw-rg-karte" href="{{ basis }}{{ r.id }}/">
+      <span class="osvw-rg-bild"><img src="{{ r.bild }}" alt="" width="450" height="450" loading="lazy"></span>
+      <span class="osvw-rg-txt"><em>{{ r.marke }}</em><b>{{ r.titel }}</b><span>{{ r.kurz }}</span><small>{{ r.lesezeit }} Min. Lesezeit</small></span>
+    </a>
+    {% endfor %}
+  </div>
+  {% if videosUrl %}<p class="osvw-rg-videos">Lieber zusehen? <a href="{{ videosUrl }}">Videos aus der Werkstatt ›</a></p>{% endif %}
+  <div class="osvw-hinweis">
+    <strong>Ihre Frage ist nicht dabei?</strong>
+    <p>In den <a href="{{ faqUrl }}">häufigen Fragen</a> finden Sie Antworten rund um Bestellung, Versand und Rücksendung. Oder Sie rufen an, {{ zeiten }}, unter <a href="tel:{{ telefon | replace({' ': '', '-': ''}) }}">{{ telefon }}</a>.</p>
+  </div>
+</div>

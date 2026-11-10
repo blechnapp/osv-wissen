@@ -1,0 +1,16 @@
+{% macro karte(v, bild) %}
+<article class="osvw-vd" id="video-{{ v.youtube }}">
+  <a class="osvw-vd-bild" href="https://www.youtube.com/watch?v={{ v.youtube }}" target="_blank" rel="noopener" aria-label="Video ansehen: {{ v.titel }}">
+    <img src="{{ bild }}{{ v.youtube }}.webp" alt="" width="800" height="450" loading="lazy">
+    <span class="osvw-vd-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+    <span class="osvw-vd-marke">{{ v.marke }}</span>
+  </a>
+  <div class="osvw-vd-txt">
+    <h2><a href="https://www.youtube.com/watch?v={{ v.youtube }}" target="_blank" rel="noopener">{{ v.titel }}</a></h2>
+    <p>{{ v.text }}</p>
+    {% if v.dazu | length > 0 %}
+    <div class="osvw-vd-dazu"><span>Dazu passend</span>{% for x in v.dazu %}<a href="{{ x.url }}">{{ x.text }} ›</a>{% endfor %}</div>
+    {% endif %}
+  </div>
+</article>
+{% endmacro %}

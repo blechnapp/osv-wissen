@@ -26,11 +26,12 @@ class Lader(jinja2.BaseLoader):
         rel = name.replace("OSVWissen::", "").replace(".", "/") + ".twig"
         s = (P / "resources/views" / rel).read_text()
         s = s.replace("{% elseif", "{% elif")
-        s = re.sub(r"\{\{ t\.fragen \| length == 1 \? 'Frage' : 'Fragen' \}\}", "{{ 'Frage' if t.fragen | length == 1 else 'Fragen' }}", s)
+        s = re.sub(r"\{\{ ([^{}?]+?) \? '([^']*)' : '([^']*)' \}\}", r"{{ '\2' if \1 else '\3' }}", s)
         s = s.replace("| replace({' ': '', '-': ''})", "| ohneleer")
         return s, None, lambda: True
 env = jinja2.Environment(loader=Lader(), autoescape=True)
 env.filters["raw"] = lambda x: jinja2.Markup(x) if hasattr(jinja2, "Markup") else __import__("markupsafe").Markup(x)
+env.globals["plugin_path"] = lambda n: "../resources"
 env.filters["ohneleer"] = lambda x: x.replace(" ", "").replace("-", "")
 widget = {"settings": {"customClass": {"mobile": ""}}}
 beilage = env.get_template('OSVWissen::Partials.Stil').render() + env.get_template('OSVWissen::Containers.WissenSkript').render()
@@ -38,4 +39,21 @@ rahmen = '<!doctype html><html lang=de><meta charset=utf-8><meta name=viewport c
 (P / "vorschau").mkdir(exist_ok=True)
 (P / "vorschau/faq.html").write_text(rahmen.format(t="Häufige Fragen", b=beilage, x=env.get_template("OSVWissen::Inhalt.Faq").render(themen=themen, kontaktUrl="/kontakt/", telefon="+49 37362 774-0", email="info@original-seiffener-volkskunst.de", zeiten="Mo–Fr 10–16 Uhr", videoKanal="https://www.youtube.com/channel/UC55qqOuVezJhwKjXpJV8irg")))
 (P / "vorschau/kontakt.html").write_text(rahmen.format(t="Kurzhilfe Kontaktseite", b=beilage, x=env.get_template("OSVWissen::Inhalt.Kurzhilfe").render(fragen=ort("kontakt"), faqUrl="faq.html")))
+def woerter(s): return len(s.split()) if s.strip() else 0
+bs = {b["id"]: b for b in d["bausteine"]}
+def ratgeber_voll(r):
+    r = dict(r); n = woerter(r.get("einleitung", "")); ab = []
+    for a in r["abschnitte"]:
+        abs_ = bs[a["baustein"]]["absaetze"] if "baustein" in a else a.get("absaetze", [])
+        if a.get("liste"): abs_ = [x if x.startswith("- ") or re.match(r"https?://", x) else "- " + x for x in abs_]
+        f = aufbereiten({"absaetze": abs_}); n += woerter(f["klartext"]); ab.append({"titel": a["titel"], "bloecke": f["bloecke"]})
+    r["abschnitte"] = ab; r["lesezeit"] = max(1, -(-n // 180))
+    r["videoDaten"] = next((v for v in d.get("videos", []) if v["youtube"] == r.get("video")), None)
+    return r
+liste = [dict(id=r["id"], titel=r["titel"], kurz=r["kurz"], marke=r["marke"], bild=r["bild"], lesezeit=ratgeber_voll(r)["lesezeit"]) for r in d.get("ratgeber", [])]
+rg = dict(basis="ratgeber-", liste=liste, zeiten="Mo–Fr 10–16 Uhr", telefon="+49 37362 774-0", faqUrl="faq.html", videosUrl="videos.html")
+(P / "vorschau/ratgeber.html").write_text(rahmen.format(t="Gut zu wissen", b=beilage, x=env.get_template("OSVWissen::Inhalt.RatgeberUebersicht").render(**rg)))
+for r in d.get("ratgeber", []):
+    (P / ("vorschau/ratgeber-" + r["id"] + ".html")).write_text(rahmen.format(t=r["titel"], b=beilage, x=env.get_template("OSVWissen::Inhalt.Ratgeber").render(r=ratgeber_voll(r), **rg)))
+(P / "vorschau/videos.html").write_text(rahmen.format(t="Videos", b=beilage, x=env.get_template("OSVWissen::Inhalt.Videos").render(videos=d.get("videos", []), kanal="https://www.youtube.com/channel/UC55qqOuVezJhwKjXpJV8irg", zeiten="Mo–Fr 10–16 Uhr", telefon="+49 37362 774-0", faqUrl="faq.html", ratgeberUrl="/ratgeber/")))
 print("Vorschau:", P / "vorschau/faq.html")

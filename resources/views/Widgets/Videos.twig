@@ -1,0 +1,3 @@
+{# Gibt nur den Aufruf aus, die Videos liest osvw_videos() erst beim Seitenaufruf (siehe Extensions/WissenTwig.php). #}
+{% set customClass = widget.settings.customClass.mobile %}
+<div class="widget osvw-widget{% if customClass | length > 0 %} {{ customClass }}{% endif %}">{% verbatim %}{{ osvw_videos() }}{% endverbatim %}</div>
