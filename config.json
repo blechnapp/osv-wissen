@@ -27,6 +27,14 @@
           "options": {
             "defaultValue": "Mo–Fr 10–16 Uhr"
           }
+        },
+        "email": {
+          "type": "text",
+          "required": false,
+          "label": "E-Mail-Adresse (Anzeige)",
+          "options": {
+            "defaultValue": "info@original-seiffener-volkskunst.de"
+          }
         }
       }
     },

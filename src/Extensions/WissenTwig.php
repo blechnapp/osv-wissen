@@ -62,6 +62,7 @@ class WissenTwig extends Twig_Extension
             'themen'     => $themen,
             'kontaktUrl' => (string)$config->get('OSVWissen.kontaktUrl', '/kontakt/'),
             'telefon'    => (string)$config->get('OSVWissen.telefon', '+49 37362 774-0'),
+            'email'      => (string)$config->get('OSVWissen.email', 'info@original-seiffener-volkskunst.de'),
             'zeiten'     => (string)$config->get('OSVWissen.servicezeiten', 'Mo–Fr 10–16 Uhr'),
             'videoKanal' => (string)$config->get('OSVWissen.videoKanal', ''),
         ]);

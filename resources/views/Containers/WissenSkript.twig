@@ -28,6 +28,17 @@
     var id = decodeURIComponent((location.hash || '').slice(1)); var d = id && document.getElementById(id);
     if (d && d.tagName === 'DETAILS') { d.open = true; d.scrollIntoView({ block: 'start' }); }
   }
+  // Chat-Kachel erst zeigen, wenn Tawk geladen ist (lädt nur nach Cookie-Zustimmung)
+  var versuche = 0;
+  (function chatPruefen() {
+    var T = window.Tawk_API, k = document.querySelector('[data-osvw-chat]');
+    if (k && T && typeof T.maximize === 'function') { k.classList.remove('osvw-aus'); return; }
+    if (++versuche < 40) setTimeout(chatPruefen, 1000);
+  })();
+  document.addEventListener('click', function (e) {
+    var k = e.target.closest && e.target.closest('[data-osvw-chat]'); if (!k) return;
+    var T = window.Tawk_API; try { T.showWidget(); T.maximize(); } catch (x) {}
+  });
   window.addEventListener('hashchange', oeffneAusAdresse);
   if (document.readyState === 'complete') oeffneAusAdresse(); else window.addEventListener('load', oeffneAusAdresse);
 })();

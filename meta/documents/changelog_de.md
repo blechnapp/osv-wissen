@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.0 (10.11.2026)
+- FAQ-Seite: Abstand zum Menü, Breite wie der Shop (1300 px).
+- Kontaktwege oben in der Box: Chat (nur wenn Tawk geladen ist, öffnet den Chat), E-Mail, Kontaktformular, Telefon.
+- Neue Einstellung „E-Mail-Adresse (Anzeige)“.
+
 ## 0.3.0 (09.11.2026)
 - Widgets geben nur noch den Aufruf `osvw_faq()` bzw. `osvw_kurzhilfe()` aus, die Texte werden erst beim Seitenaufruf gelesen. Bisher fror der ShopBuilder den Stand beim Speichern ein (alte Texte, alte Skripte, maskierte FAQPage-Daten, doppelter Footer).
 - FAQPage-Daten kommen über den Container „OSV Wissen Suche“ am Seitenende, nur auf der FAQ-Seite.
