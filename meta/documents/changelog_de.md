@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.5.1 (11.11.2026)
+- Ratgeber-Unterseiten erkennen ihren Ratgeber an der Adresse (/ratgeber/<name>/). In Set 78 zeigten alle fünf Unterseiten die Übersicht, obwohl je ein eigenes Widget eingesetzt war. Die Auswahl im Widget gilt weiter, wenn sie gesetzt ist.
+
 ## 0.5.0 (10.11.2026)
 - Neues Widget „OSV Videos“: Seite mit sechs Filmen (Anleitung, Hilfe, Werkstatt, Besuch), Vorschaubilder liegen im Plugin, ein Klick öffnet das Video in einem neuen Fenster auf YouTube. Auf der Seite selbst lädt nichts von YouTube.
 - Neues Widget „OSV Ratgeber“ mit Auswahl „Was soll angezeigt werden?“: Übersicht „Gut zu wissen“ oder einer von fünf Ratgebern (Räuchermännchen anzünden, Holzkunst pflegen, Pyramide dreht nicht, Lichterbogen leuchtet nicht, Nussknacker). Die Texte kommen aus den geprüften FAQ-Bausteinen, Lesezeit rechnet das Plugin.

@@ -4,6 +4,7 @@ namespace OSVWissen\Extensions;
 
 use OSVWissen\Services\WissenService;
 use Plenty\Plugin\ConfigRepository;
+use Plenty\Plugin\Http\Request;
 use Plenty\Plugin\Templates\Extensions\Twig_Extension;
 use Plenty\Plugin\Templates\Factories\TwigFactory;
 use Plenty\Plugin\Templates\Twig;
@@ -119,6 +120,9 @@ class WissenTwig extends Twig_Extension
             'videosUrl' => (string)$config->get('OSVWissen.videosUrl', '/videos/'),
         ];
         if ((string)$id === 'uebersicht') {
+            $id = $this->ratgeberAusAdresse();
+        }
+        if ((string)$id === 'uebersicht') {
             return pluginApp(Twig::class)->render('OSVWissen::Inhalt.RatgeberUebersicht', $daten);
         }
         $r = $wissen->ratgeber((string)$id);
@@ -127,5 +131,18 @@ class WissenTwig extends Twig_Extension
         }
         $daten['r'] = $r;
         return pluginApp(Twig::class)->render('OSVWissen::Inhalt.Ratgeber', $daten);
+    }
+
+    /** Letzter Teil der Adresse (/ratgeber/pyramide-dreht-nicht/), wenn es ein Ratgeber dieses Namens gibt, sonst uebersicht. So zeigt die Unterseite ihren Ratgeber auch dann, wenn im Widget nichts ausgewählt ist. */
+    private function ratgeberAusAdresse(): string
+    {
+        $pfad = (string)pluginApp(Request::class)->getRequestUri();
+        $pfad = explode('?', $pfad)[0];
+        $teile = array_values(array_filter(explode('/', $pfad), 'strlen'));
+        $letzter = count($teile) > 0 ? strtolower($teile[count($teile) - 1]) : '';
+        if ($letzter !== '' && pluginApp(WissenService::class)->ratgeber($letzter) !== null) {
+            return $letzter;
+        }
+        return 'uebersicht';
     }
 }
